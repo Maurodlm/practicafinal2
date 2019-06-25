@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Views.LoginPage">
+    <ContentPage.Content>
+        
+        <StackLayout
+            Padding="10,20,10,5"
+            BackgroundColor="Purple">
+            <Label
+                HorizontalOptions="Center"
+                FontSize="Large"
+                FontAttributes="Bold"
+                Text="Login"
+                TextColor="White">
+            </Label>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Text="E-mail"
+                    TextColor="White">
+            </Label>
+            <Entry
+                 Grid.Row="0"
+                 Grid.Column="1"
+                Keyboard="Email"
+                Placeholder="Enter your email...">
+            </Entry>
+            <Label
+                 Grid.Row="1"
+                 Grid.Column="0"
+                
+              Text="Password"
+              TextColor="White">
+            </Label>
+            <Entry
+                 Grid.Row="1"
+                 Grid.Column="1"
+                IsPassword="true"
+                Placeholder="Enter your password...">
+            </Entry>
+            </Grid>
+            <ActivityIndicator>
+            </ActivityIndicator>
+            <Button
+                Text="Login"
+                BackgroundColor="White"
+                TextColor="Blue"
+                BorderRadius="24">
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
