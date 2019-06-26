@@ -3,6 +3,7 @@ namespace App1.ViewModels
 {
     using GalaSoft.MvvmLight.Command;
     using System.Windows.Input;
+    using Views;
     using Xamarin.Forms;
 
 
@@ -20,8 +21,8 @@ namespace App1.ViewModels
         #region Properties
         public string Email
         {
-            get;
-            set;
+            get { return this.email; }
+            set { SetValue(ref this.email, value); }
         }
         
         public string Password
@@ -45,6 +46,7 @@ namespace App1.ViewModels
         public LoginViewModel()
         {
             this.IsEnabled = true;
+
         }
         #endregion
         #region Commands
@@ -90,11 +92,14 @@ namespace App1.ViewModels
             }
             this.IsRunning = false;
             this.IsEnabled = true;
-            await Application.Current.MainPage.DisplayAlert(
-                    "Ok",
-                    "Fuck yeahhh!!!",
-                    "Accept");
-            return;
+
+            this.Email = string.Empty;
+            this.Password = string.Empty;
+
+            MainViewModel.GetInstance().App1 = new App1ViewModel();
+
+            await Application.Current.MainPage.Navigation.PushAsync(new App1Page());
+           
         }
         #endregion
     }
