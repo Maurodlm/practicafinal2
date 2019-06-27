@@ -47,6 +47,11 @@ namespace App1.ViewModels
         {
             this.IsEnabled = true;
 
+            this.Email = "mauroahdlm@gmail.com";
+            this.Password = "1234";
+
+            
+
         }
         #endregion
         #region Commands

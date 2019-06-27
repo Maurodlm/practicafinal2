@@ -14,9 +14,11 @@
             set;
         }
         #endregion
+
         #region Constructors
         public MainViewModel()
         {
+            instance = this;
             this.Login = new LoginViewModel();
         }
         #endregion
